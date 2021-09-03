@@ -56,7 +56,7 @@ const Header = () => {
                   style={{ color: "#fa5821" }}
                   href="/careers"
                 >
-                  <b>We're Hiring!</b>
+                  <b>We&apos;re Hiring!</b>
                 </a>
               </li>
             </ul>

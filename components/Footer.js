@@ -36,7 +36,7 @@ const Footer = () => {
                   <a href="/services/for-profit">Church-Owned Business</a>
                 </li>
                 <li>
-                  <a href="/services/taxes">Minister's Taxes</a>
+                  <a href="/services/taxes">Minister&apos;s Taxes</a>
                 </li>
                 <li>
                   <a href="/services/community-development-corporation">
@@ -71,7 +71,7 @@ const Footer = () => {
                   <a href="/suite/view/s/kingdom">Kingdom Steward</a>
                 </li>
                 <li>
-                  <a href="/suite/view/s/minister">Minister's Suite</a>
+                  <a href="/suite/view/s/minister">Minister&apos;s Suite</a>
                 </li>
                 <li>
                   <a href="/suite/view/s/compensation">Compensation Suite</a>
@@ -80,7 +80,7 @@ const Footer = () => {
                   <a href="/suite/view/s/documents">Documents Suite</a>
                 </li>
                 <li>
-                  <a href="/suite/view/s/secretary">Secretary's Suite</a>
+                  <a href="/suite/view/s/secretary">Secretary&apos;s Suite</a>
                 </li>
                 <li>
                   <a href="/suite/view/s/tax">Tax Suite</a>
