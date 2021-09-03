@@ -1,3 +1,71 @@
+// From Layout scss
+
+footer {
+  font-size: 14px;
+  line-height: 22px;
+  &.dark-bg {
+    color: #a3b1bf;
+  }
+  .inner {
+    padding-top: 45px;
+    padding-bottom: 35px;
+  }
+  .container > .row {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+  .row .inner {
+    padding: 25px;
+  }
+  .logo {
+    height: auto;
+    max-height: 100%;
+  }
+  h4 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+}
+
+.footer-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  li {
+    display: inline;
+    padding-left: 10px;
+    &:before {
+      display: inline-block;
+      content: "·";
+      padding-right: 12px;
+    }
+    &:first-child:before {
+      display: none;
+    }
+  }
+}
+
+.footer-bottom {
+  background: #283645;
+  color: #707e8c;
+  .container.inner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  p,
+  a {
+    color: #707e8c;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+//end layout scss
 // From screen.scss
 footer {
   h4 {
@@ -30,4 +98,19 @@ footer {
       margin-right: -20px;
     }
   }
+  .footer-bottom {
+    p.pull-left,
+    ul.pull-right {
+      float: none !important;
+      text-align: center;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .footer-menu li {
+    padding: 0 5px;
+  }
 }
+
+// end responsive scss
