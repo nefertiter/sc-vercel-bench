@@ -61,15 +61,17 @@ const Header = () => {
                 </a>
               </li>
             </ul>
-            <a href="/" className="navbar-brand">
-              <Image
-                src="/www-assets/images/sc/logo.svg" // Route of the image file
-                height={40}
-                width={229}
-                className="logo"
-                alt="StartChurch"
-              />
-            </a>
+            <Link href="/" className="navbar-brand">
+              <a className="navbar-brand">
+                <Image
+                  src="/www-assets/images/sc/logo.svg" // Route of the image file
+                  height={40}
+                  width={229}
+                  className="logo"
+                  alt="StartChurch"
+                />
+              </a>
+            </Link>
             <a
               className="btn responsive-menu pull-right"
               data-toggle="collapse"
@@ -83,14 +85,16 @@ const Header = () => {
           <div className="sticky-wrapper">
             <div className="navbar-collapse collapse">
               <div className="container">
-                <Link href="/" className="navbar-brand">
-                  <Image
-                    src="/www-assets/images/sc/logo.svg" // Route of the image file
-                    height={40}
-                    width={229}
-                    className="logo"
-                    alt="StartChurch"
-                  />
+                <Link href="/">
+                  <a className="navbar-brand">
+                    <Image
+                      src="/www-assets/images/sc/logo.svg" // Route of the image file
+                      height={40}
+                      width={229}
+                      className="logo"
+                      alt="StartChurch"
+                    />
+                  </a>
                 </Link>
                 <ul className="nav navbar-nav">
                   <li className="hidden-desktop-navbar">
