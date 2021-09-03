@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
@@ -61,10 +62,12 @@ const Header = () => {
               </li>
             </ul>
             <Link href="/" className="navbar-brand">
-              <img
-                src="/www-assets/images/sc/logo.svg"
+              <Image
+                src="/www-assets/images/sc/logo.svg" // Route of the image file
+                height={40}
+                width={229}
                 className="logo"
-                alt=""
+                alt="StartChurch"
               />
             </Link>
             <a
@@ -81,10 +84,12 @@ const Header = () => {
             <div className="navbar-collapse collapse">
               <div className="container">
                 <Link href="/" className="navbar-brand">
-                  <img
-                    src="//assets.startchurch.com/www-assets/images/sc/logo.svg"
+                  <Image
+                    src="/www-assets/images/sc/logo.svg" // Route of the image file
+                    height={40}
+                    width={229}
                     className="logo"
-                    alt=""
+                    alt="StartChurch"
                   />
                 </Link>
                 <ul className="nav navbar-nav">
