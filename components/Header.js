@@ -61,7 +61,7 @@ const Header = () => {
                 </a>
               </li>
             </ul>
-            <Link href="/" className="navbar-brand">
+            <a href="/" className="navbar-brand">
               <Image
                 src="/www-assets/images/sc/logo.svg" // Route of the image file
                 height={40}
@@ -69,7 +69,7 @@ const Header = () => {
                 className="logo"
                 alt="StartChurch"
               />
-            </Link>
+            </a>
             <a
               className="btn responsive-menu pull-right"
               data-toggle="collapse"
