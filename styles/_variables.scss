@@ -1,0 +1,25 @@
+$back-primary-color: #506a85; // maybe should be replace with a dynamic color based on $success, i.e.: darken( $success, 10% )
+$selection-color: #b6dbf2;
+$alter-color: #aaf2e4;
+$item-color: #73879c;
+$bg-color-1: #f2f5f7;
+$bg-color-2: #2f4052;
+// Buttons colors
+$success: #5cb85c; //Green
+$green: #6bc04b; //Green
+$primary: #387eaa; // Blue
+$danger: #d9534f; // Red
+$warning: #f0ad4e; //Orange
+$default: #95a5a6; // Gray
+$pink: #d487be;
+$purple: #9b59b6;
+$light-blue: #71acd0;
+$orange: #fa5821;
+$dark-modal: darken(
+  $primary,
+  20%
+); //maybe should be replace with a dynamic color based on $success, i.e.: darken( $success, 10% )
+$dark-success: darken(
+  $success,
+  10%
+); //maybe should be replace with a dynamic color based on $success, i.e.: darken( $success, 10% )
