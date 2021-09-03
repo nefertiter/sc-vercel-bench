@@ -1,0 +1,33 @@
+// From screen.scss
+footer {
+  h4 {
+    margin-bottom: 10px;
+  }
+  ul {
+    padding-left: 0px;
+    margin-bottom: 20px;
+  }
+}
+#footer .call-us {
+  margin: 0;
+  color: #6bc04b;
+}
+// End from Screen.scss
+
+//  From responsive.scss
+@media (max-width: 767px) {
+  footer {
+    .inner {
+      padding-top: 35px;
+      padding-bottom: 25px;
+    }
+    .row .inner {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .container > .row {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+}

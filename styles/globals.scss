@@ -176,5 +176,10 @@ a:hover {
 // Variables
 @import "bootstrap.minimal.scss";
 @import "_variables.scss";
+@import "components/theme.scss";
 @import "components/layout.scss";
 @import "components/header.scss";
+@import "components/footer.scss";
+.hidden {
+  display: none;
+}
