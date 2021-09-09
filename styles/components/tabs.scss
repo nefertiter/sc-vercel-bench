@@ -1,0 +1,135 @@
+/*===================================================================================*/
+/*	TABS 2-BIG ON TOP
+/*===================================================================================*/
+ul.etabs {
+  display: inline-block;
+}
+ul.etabs .tab:first-child {
+  margin-left: 30px;
+}
+ul.etabs .tab:last-child {
+  margin-right: 30px;
+}
+
+.tabs-2-big-top {
+  .etabs {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+  }
+  .tab {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    border-bottom: 2px solid transparent;
+    border-radius: 3px;
+    margin: 0 15px;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      height: 0;
+      width: 0;
+      border: solid transparent;
+      pointer-events: none;
+      -webkit-transition: all 200ms ease-out;
+      -moz-transition: all 200ms ease-out;
+      -o-transition: all 200ms ease-out;
+      transition: all 200ms ease-out;
+    }
+    &:before {
+      border-width: 23px;
+      margin-left: -23px;
+    }
+    &:after {
+      border-width: 20px;
+      margin-left: -20px;
+    }
+    a {
+      display: block;
+      padding: 35px;
+      color: $back-primary-color;
+      opacity: 0.5;
+    }
+    &:hover {
+      background: #f7f9fa;
+      border-color: #e6ebf0;
+      &:before {
+        border-top-color: #e6ebf0;
+      }
+      &:after {
+        border-top-color: #f7f9fa;
+      }
+    }
+    &.active {
+      background: #fff;
+      border-color: #e1e7ed;
+      &:before {
+        border-top-color: #e1e7ed;
+      }
+      &:after {
+        border-top-color: #fff;
+      }
+    }
+    &:hover a,
+    &.active a {
+      opacity: 1;
+    }
+    a p {
+      margin-bottom: 0;
+    }
+  }
+  &.tab-container .panel-container {
+    position: relative;
+    margin-top: 80px;
+    z-index: 1;
+    p {
+      margin: 0;
+      padding-bottom: 20px;
+    }
+  }
+}
+// From layout.scss
+.screen-container {
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  //   background: url("../images/art/screen-container.png") no-repeat (top / 100%);
+  overflow: hidden;
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 47%;
+  }
+  .tab-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 5% 4.5%;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .tabs-2-big-top {
+    .tab {
+      width: 100%;
+      margin: 0 0 50px 0;
+      a {
+        padding: 25px;
+      }
+    }
+    &.tab-container .panel-container {
+      margin-top: 0;
+    }
+  }
+}

@@ -55,12 +55,12 @@ iframe {
   /* Firefox */
   color: $back-primary-color;
 }
+// We take this out for NEXTJS
+// html:not(.no-csstransitions) main [class*="col-"] {
+//   opacity: 0;
 
-html:not(.no-csstransitions) main [class*="col-"] {
-  opacity: 0;
-
-  /* Hide content for animations on scroll in scripts.js */
-}
+//   /* Hide content for animations on scroll in scripts.js */
+// }
 
 html:not(.no-csstransitions) .no_animation main [class*="col-"] {
   opacity: 1;
