@@ -1,19 +1,26 @@
 import type { NextPage } from "next";
 import { useEffect } from "react";
 import EnglishLayout from "../layouts/EnglishLayout";
+import Image from "next/image";
 import Head from "next/head";
+
+declare const window: Window &
+  typeof globalThis & {
+    jQuery: any;
+    $: any;
+  };
+
 // import styles from "../styles/Services501c3.module.css";
 const placeholder =
   "https://s3.amazonaws.com/media.startchurch.com/Media/features/temp_image.jpg";
 
 const Services501c3: NextPage = () => {
   useEffect(() => {
-    if (typeof window !== "undefined" && typeof window.$ === "undefined") {
+    if (typeof window !== "undefined" && typeof window.jQuery === "undefined") {
       window.jQuery = window.$ = require("../public/js/jquery.min.js");
     }
     require("../public/js/jquery.easytabs.js");
-
-    $(".tabs.tabs-2-big-top").easytabs({
+    window.$(".tabs.tabs-2-big-top").easytabs({
       animationSpeed: 200,
       updateHash: false,
     });
@@ -202,8 +209,8 @@ const Services501c3: NextPage = () => {
                   document in your church. The StartRIGHT Service empowers you
                   to select the bylaws* that protect your vision, your ministry,
                   and your members, adopting the governmental structure that
-                  reflects your ministry structure and allowing the pastor's
-                  vision to be kept clear.
+                  reflects your ministry structure and allowing the
+                  pastor&apos;s vision to be kept clear.
                 </p>
               </div>
               <div className="clearfix visible-md-block visible-lg-block"></div>
@@ -286,16 +293,16 @@ const Services501c3: NextPage = () => {
                     Hear what pastors are saying about the StartRIGHT Service.
                   </div>
                 </header>
-
+                video goes here
                 {/* {{  {'id': 'v56f7h54dn', 'image': 'https://embedwistia-a.akamaihd.net/deliveries/1feedac60705fe2f3fd7c513a005e409.webp?image_crop_resized=640x360' } | WistiaVideo | raw }} */}
                 <div className="col-xs-10 outer-top-xs center-block text-center">
                   <header>
                     <p>
                       <i>
-                        "We want to encourage you. Are you a church planter? Are
-                        you starting a ministry? Are you ready to answer the
-                        call of God on your life? Let StartCHURCH help you like
-                        they have helped us."
+                        &quot;We want to encourage you. Are you a church
+                        planter? Are you starting a ministry? Are you ready to
+                        answer the call of God on your life? Let StartCHURCH
+                        help you like they have helped us.&quot;
                       </i>
                     </p>
                     <p style={{ color: "#6bc04b" }}>
@@ -318,13 +325,18 @@ const Services501c3: NextPage = () => {
               <div className="col-md-7 text-left light-color">
                 <div className="col-md-5 text-center visible-sm visible-xs inner-bottom-xs">
                   <a href="{{path('products')}}">
-                    <img
-                      src={placeholder}
-                      data-src="https://s3.amazonaws.com/marketing2019-startchurch/startright/group_suites.webp"
+                    <Image
+                      src="https://s3.amazonaws.com/marketing2019-startchurch/startright/group_suites.webp"
                       width="450"
                       height="199"
-                      style={{ width: "100%", maxWidth: 450 }}
+                      // style={{ width: "100%", maxWidth: 450 }}
+                      alt="Powerful, Cloud-Based Software Tools Image"
                     />
+                    {/* <img
+                      src={placeholder}
+                      data-src=""
+                      
+                    /> */}
                   </a>
                 </div>
                 <div
@@ -341,7 +353,7 @@ const Services501c3: NextPage = () => {
                   Suite, Tax Suite, and Exemption Suite. In addition to this
                   software, you can use our FREE clerical services that will put
                   a specialist to work for you in filling out the paperwork as
-                  you direct. This really is America's #1 church planting
+                  you direct. This really is America&apos;s #1 church planting
                   service!
                 </p>
                 <p>
@@ -356,10 +368,12 @@ const Services501c3: NextPage = () => {
               </div>
               <div className="col-md-5 text-center hidden-sm hidden-xs inner-top-xs">
                 <a href="{{path('products')}}">
-                  <img
-                    src={placeholder}
-                    data-src="https://s3.amazonaws.com/marketing2019-startchurch/startright/group_suites.webp"
-                    style={{ width: "100%", maxWidth: 450 }}
+                  <Image
+                    src="https://s3.amazonaws.com/marketing2019-startchurch/startright/group_suites.webp"
+                    width="450"
+                    height="199"
+                    // style={{ width: "100%", maxWidth: 450 }}
+                    alt="Powerful, Cloud-Based Software Tools Image"
                   />
                 </a>
               </div>
@@ -560,10 +574,12 @@ const Services501c3: NextPage = () => {
                               boxShadow: "0 0 30px 10px rgba(73, 73, 73, 0.44)",
                             }}
                           >
-                            <img
-                              src={placeholder}
-                              data-src="https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/website+2.1/startright/str_box_1.jpg"
-                              alt="man smiling"
+                            <Image
+                              src="https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/website+2.1/startright/str_box_1.jpg"
+                              width="800"
+                              height="400"
+                              layout="responsive"
+                              alt="Man Smiling"
                             />
                           </figure>
                         </div>
@@ -577,9 +593,11 @@ const Services501c3: NextPage = () => {
                               boxShadow: "0 0 30px 10px rgba(73, 73, 73, 0.44)",
                             }}
                           >
-                            <img
-                              src={placeholder}
-                              data-src="https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/website+2.1/startright/str_box_2.jpg"
+                            <Image
+                              src="https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/website+2.1/startright/str_box_2.jpg"
+                              width="800"
+                              height="400"
+                              layout="responsive"
                               alt="handshake"
                             />
                           </figure>
