@@ -1,7 +1,53 @@
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+// import dynamic from "next/dynamic";
 
 const Header = () => {
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof window.$ === "undefined") {
+      window.jQuery = window.$ = require("../public/js/jquery.min.js");
+      console.log("login jquery", $(".js-activated"));
+    }
+
+    const is_touch_device = () => {
+      return (
+        $(window).width() < 1024 ||
+        "ontouchstart" in window || // works on most browsers
+        navigator.maxTouchPoints
+      ); // works on IE10/11 and Surface
+    };
+    if (!is_touch_device()) {
+      require("../public/js/bootstrap-hover-dropdown.min.js");
+      $(".js-activated").dropdownHover({
+        instantlyCloseOthers: false,
+        delay: 0,
+      });
+      // .dropdown();
+    } else {
+      $(".js-activated").on("click", function (ev) {
+        ev.preventDefault();
+        $(this).parent().addClass("open");
+      });
+    }
+
+    if ($(".navbar .navbar-collapse").length > 0) {
+      // var sticky = new Waypoint.Sticky({
+      //   element: $(".navbar .navbar-collapse")[0],
+      // });
+    }
+
+    // if ($(window).width() <= 768) {
+    //   $(window).scroll(function () {
+    //     y = window.scrollY;
+    //     if (y > 120) {
+    //       $(".sticky-bottom").addClass("stuck");
+    //     } else {
+    //       $(".sticky-bottom").removeClass("stuck");
+    //     }
+    //   });
+    // }
+  }, []);
   return (
     <header>
       <div className="navbar">
@@ -9,17 +55,13 @@ const Header = () => {
           <div className="container">
             <ul className="info pull-right">
               <li>
-                <a
-                  href="javascript:void()"
-                  data-toggle-cart=""
-                  style={{ position: "relative" }}
-                >
+                <a data-toggle-cart="" style={{ position: "relative" }}>
                   <i style={{ fontSize: "135%" }} className="icon-sc-cart"></i>
                   <span className="cart-dot"></span>
                 </a>
               </li>
               <li>
-                <a href="//espanol.startchurch.com/">
+                <a href="http://espanol.startchurch.com/">
                   {" "}
                   Ver nuestro sitio en Español
                 </a>
@@ -179,7 +221,188 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
+                  <li className="dropdown yamm-fullwidth hidden-mobile-navbar">
+                    <a href="#" className="dropdown-toggle js-activated">
+                      Resources
+                    </a>
+                    <ul
+                      className="dropdown-menu yamm-dropdown-menu"
+                      style={{
+                        width: 260,
+                        top: "auto",
+                        left: "auto",
+                        right: "unset",
+                      }}
+                      // style="width: 260px; top: auto; left: auto; right: unset;"
+                    >
+                      <li>
+                        <div className="yamm-content row">
+                          <div className="inner" style={{ marginBottom: 0 }}>
+                            <h3>
+                              <a href="/blog">BLOG</a>
+                            </h3>
+                            <ul className="circled">
+                              <li>
+                                <a href="/blog/view/name/prepare-for-pastor-appreciation-day-2021">
+                                  <small style={{ textTransform: "none" }}>
+                                    Prepare for Pastor Appreciation Day 2021
+                                  </small>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/blog/view/name/3-top-questions-pastors-ask-us-the-most">
+                                  <small style={{ textTransform: "none" }}>
+                                    3 Top Questions Pastors Ask Us the Most
+                                  </small>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/blog/view/name/an-effective-strategy-for-your-church-in-2021">
+                                  <small style={{ textTransform: "none" }}>
+                                    An Effective Strategy for Your Church in
+                                    2021
+                                  </small>
+                                </a>
+                              </li>
+                            </ul>
+                            <h3>
+                              <a href="{{ path('podcast') }}">PODCAST</a>
+                            </h3>
+                            <h3>WEBINARS</h3>
+                            <ul className="circled">
+                              <li>
+                                <a href="{{ path ('launch_legally') }}">
+                                  <small style={{ textTransform: "none" }}>
+                                    Launch Legally Webinar
+                                  </small>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="{{ path ('bookkeeping_webinar') }}">
+                                  <small style={{ textTransform: "none" }}>
+                                    Bookkeeping Webinar
+                                  </small>
+                                </a>
+                              </li>
+                            </ul>
+                            <h3>
+                              <a href="{{ path ('faqs') }}">FAQs</a>
+                            </h3>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  {/* <!-- Mobile Resources Menu --> */}
+                  <li className="dropdown hidden-desktop-navbar">
+                    <a href="#" className="dropdown-toggle js-activated">
+                      Resources
+                    </a>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <a
+                          className="dropdown-toggle js-activated"
+                          href="/blog"
+                        >
+                          Blog
+                        </a>
+                        <ul className="dropdown-menu">
+                          {/* {% for post in posts %}
+                                            <li><a href="/blog/view/name/{{post.slug}}"><span style="text-transform: none; font-weight: 400;">{{post.title}}</span></a></li>
+                                        {% endfor %} */}
+                          <li>
+                            <a href="/blog">See all posts</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="{{ path('podcast') }}">Podcast</a>
+                      </li>
+                      <li>
+                        <a className="dropdown-toggle js-activated" href="#">
+                          Webinars
+                        </a>
+                        <ul className="dropdown-menu">
+                          <li>
+                            <a href="{{ path ('launch_legally') }}">
+                              <span
+                                style={{
+                                  textTransform: "none",
+                                  fontWeight: 400,
+                                }}
+                              >
+                                Launch Legally Webinar
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="{{ path ('bookkeeping_webinar') }}">
+                              <span
+                                style={{
+                                  textTransform: "none",
+                                  fontWeight: 400,
+                                }}
+                              >
+                                Bookkeeping Webinar
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
 
+                  <li className="dropdown">
+                    <a
+                      href="{{ path ('about_us') }}"
+                      className="dropdown-toggle js-activated"
+                    >
+                      About
+                    </a>
+                    <ul className="dropdown-menu">
+                      <li className="hidden-desktop-navbar">
+                        <a href="{{ path ('about_us') }}">
+                          About
+                          <span style={{ textTransform: "none" }}>
+                            StartCHURCH
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{ path ('www_careers') }}">Careers</a>
+                      </li>
+                      <li>
+                        <a href="{{ path ('testimonials') }}">Testimonials</a>
+                      </li>
+                      <li>
+                        <a href="{{ path ('about_us_executive_team') }}">
+                          Executive Team
+                        </a>
+                      </li>
+                      <li className="hidden-desktop-navbar">
+                        <a href="/contact">Contact Us</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="hidden-mobile-navbar">
+                    <a
+                      href="tel:+18448751494"
+                      className="business-time "
+                      style={{ color: "#fa5821" }}
+                    >
+                      <i className="icon-phone contact"></i>Call Us{" "}
+                      <span className="rTapNumber227338">844-921-5459</span>
+                    </a>
+                    <a
+                      href="/sac"
+                      target="_blank"
+                      className="business-time hidden"
+                      style={{ color: "#fa5821" }}
+                    >
+                      {" "}
+                      <i className="icon-phone contact"></i> SCHEDULE A CALL
+                    </a>
+                  </li>
                   <li className="dropdown hidden-desktop-navbar">
                     <a
                       href="/products"
@@ -311,7 +534,7 @@ const Header = () => {
                     </ul>
                   </li>
 
-                  <li className="dropdown">
+                  {/* <li className="dropdown">
                     <a
                       href="/about-us"
                       className="dropdown-toggle js-activated"
@@ -340,7 +563,7 @@ const Header = () => {
                         <a href="/contact">Contact Us</a>
                       </li>
                     </ul>
-                  </li>
+                  </li> */}
                   <li className="dropdown hidden-desktop-navbar">
                     <a
                       href="//espanol.startchurch.com/"
