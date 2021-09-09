@@ -157,7 +157,7 @@ ul {
 }
 
 .tint-bg {
-  background-color: $primary;
+  background-color: $primary !important;
   &.img-bg-soft:before,
   &.img-bg-softer:before {
     background-color: $primary;

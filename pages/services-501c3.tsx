@@ -119,8 +119,12 @@ const Services501c3: NextPage = () => {
 
         <section
           className="img-bg img-bg-soft tint-bg lazy-bg"
-          data-src="https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_4.jpg"
-          style={{ backgroundPosition: "35% 30% !important" }}
+          // data-src="https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_4.jpg"
+          style={{
+            backgroundPosition: "35% 30% !important",
+            backgroundImage:
+              "url(https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_4.jpg)",
+          }}
         >
           <div className="container inner-sm">
             <div className="row">
@@ -332,11 +336,6 @@ const Services501c3: NextPage = () => {
                       // style={{ width: "100%", maxWidth: 450 }}
                       alt="Powerful, Cloud-Based Software Tools Image"
                     />
-                    {/* <img
-                      src={placeholder}
-                      data-src=""
-                      
-                    /> */}
                   </a>
                 </div>
                 <div
@@ -383,8 +382,12 @@ const Services501c3: NextPage = () => {
 
         <section
           className="img-bg img-bg-soft tint-bg lazy-bg"
-          data-src="https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_3.jpg"
-          style={{ backgroundPosition: "23% 10% !important" }}
+          // data-src="https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_3.jpg"
+          style={{
+            backgroundPosition: "23% 10% !important",
+            backgroundImage:
+              "url(https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_3.jpg)",
+          }}
         >
           <div className="container inner-sm">
             <div className="row">

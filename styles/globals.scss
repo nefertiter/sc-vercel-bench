@@ -176,11 +176,11 @@ a:hover {
 // Variables
 @import "bootstrap.minimal.scss";
 @import "_variables.scss";
-@import "components/theme.scss";
 @import "components/tabs.scss";
 @import "components/layout.scss";
 @import "components/header.scss";
 @import "components/footer.scss";
+@import "components/theme.scss";
 // Fonts
 @import "fonts/fontello/fontello.scss";
 .hidden {
