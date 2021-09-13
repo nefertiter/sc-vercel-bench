@@ -14,6 +14,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&amp;family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://s3.amazonaws.com/assets-startchurch/assets/fonts/scicon/style.css"
+            rel="stylesheet"
+          ></link>
         </Head>
         <body>
           <Main />
