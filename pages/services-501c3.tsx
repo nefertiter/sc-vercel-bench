@@ -693,9 +693,9 @@ const Services501c3: NextPage = () => {
                 </div>
                 <p>
                   At StartCHURCH, we’re ministry-minded like you! We care about
-                  your ministry's success. That’s why we created several free
-                  resources to encourage you every step of the way as you pursue
-                  what God has called you to lead.
+                  your ministry&apos;s success. That’s why we created several
+                  free resources to encourage you every step of the way as you
+                  pursue what God has called you to lead.
                 </p>
                 <p>
                   Check out some of our top blogs, ebooks, podcasts, and more
