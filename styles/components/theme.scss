@@ -157,7 +157,7 @@ ul {
 }
 
 .tint-bg {
-  background-color: $primary !important;
+  background-color: $primary;
   &.img-bg-soft:before,
   &.img-bg-softer:before {
     background-color: $primary;
@@ -267,4 +267,12 @@ ul {
 ::-moz-selection {
   background: $selection-color;
   /* Firefox */
+}
+// from the site
+
+.text-green {
+  color: #5cb85c;
+}
+.orange-bg {
+  background-color: #fa5821 !important;
 }

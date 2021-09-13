@@ -6,10 +6,9 @@
 @import "components/layout.scss";
 @import "components/header.scss";
 @import "components/footer.scss";
-@import "components/theme.scss";
 @import "components/buttons.scss";
 @import "components/owl-carousel.scss";
-
+@import "components/theme.scss";
 // Fonts
 @import "fonts/fontello/fontello.scss";
 
@@ -22,4 +21,62 @@
 }
 .block {
   display: block;
+}
+
+//  campaings
+
+#contact-campaigns h2 {
+  margin-left: -1rem;
+  font-size: 32px;
+}
+#contact-campaigns .h1 span {
+  -webkit-box-decoration-break: clone;
+  -o-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 8px 25px;
+  line-height: 1.75;
+}
+#contact-campaigns .sched-call-content p {
+  font-size: 20px;
+  line-height: 125%;
+  margin-bottom: 10px !important;
+}
+
+// Block text
+.block-container .block-text {
+  max-width: 600px;
+  float: right;
+  padding-right: 30px;
+  padding-left: 20px;
+}
+.block-img {
+  background-size: cover;
+}
+
+// Feature Box
+
+.feature-box {
+  padding: 30px;
+  border-radius: 5px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  &.dark {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  &.darker {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  &.darkest {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  &.light {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &.lighter {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  &.lightest {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }

@@ -44,30 +44,30 @@ const Services501c3: NextPage = () => {
                   "url('https://s3.amazonaws.com/marketing2019-startchurch/2020/heroes/startright_hero_2.jpg')",
               }}
             >
-              <a href="#contact-campaigns">
-                <div className="container">
-                  <div className="caption vertical-center text-left">
-                    <div className="h1 dark-color text-nt">
-                      THE StartRIGHT
-                      <sup>
-                        <small className="dark-color">&reg;</small>
-                      </sup>
-                      <br /> SERVICE
-                    </div>
-                    <p className="dark-color">
-                      Everything you need to start your church
-                    </p>
-                    <div className="">
-                      <a
-                        className="btn btn-green btn-large"
-                        href="#contact-campaigns"
-                      >
-                        Get started now
-                      </a>
-                    </div>
+              {/* <a href="#contact-campaigns"> */}
+              <div className="container">
+                <div className="caption vertical-center text-left">
+                  <div className="h1 dark-color text-nt">
+                    THE StartRIGHT
+                    <sup>
+                      <small className="dark-color">&reg;</small>
+                    </sup>
+                    <br /> SERVICE
+                  </div>
+                  <p className="dark-color">
+                    Everything you need to start your church
+                  </p>
+                  <div className="">
+                    <a
+                      className="btn btn-green btn-large"
+                      href="#contact-campaigns"
+                    >
+                      Get started now
+                    </a>
                   </div>
                 </div>
-              </a>
+              </div>
+              {/* </a> */}
             </div>
           </div>
         </section>
@@ -458,7 +458,7 @@ const Services501c3: NextPage = () => {
                   Call today to speak to a church planting specialist
                 </div>
                 <div className="h1" style={{ marginBottom: 0, fontSize: 40 }}>
-                  <span className="rTapNumber227338">XXXXXX</span>
+                  <span className="rTapNumber227338">(844) 884-7703</span>
                 </div>
               </div>
             </div>
@@ -647,6 +647,141 @@ const Services501c3: NextPage = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Resources */}
+        <section
+          className="block-container tint-bg"
+          style={{ backgroundColor: "#5cb85c", padding: 0 }}
+        >
+          <div
+            className="row"
+            style={{ display: "flex", marginRight: 0, marginLeft: 0 }}
+          >
+            <div className="block-text-wrapper col-md-6 inner-sm animated fadeInUp">
+              <div className="block-text text-left">
+                <div className="h1" style={{ marginBottom: 10 }}>
+                  Resources just for you!{" "}
+                </div>
+                <p>
+                  At StartCHURCH, we’re ministry-minded like you! We care about
+                  your ministry's success. That’s why we created several free
+                  resources to encourage you every step of the way as you pursue
+                  what God has called you to lead.
+                </p>
+                <p>
+                  Check out some of our top blogs, ebooks, podcasts, and more
+                  for church planters just like you!
+                </p>
+                <p>
+                  <a
+                    href="/services/startright/resources"
+                    style={{
+                      backgroundColor: "#fd5604 !important",
+                      marginLeft: 0,
+                    }}
+                    className="btn btn-orange btn-large outer-top-sm"
+                  >
+                    {" "}
+                    ACCESS FREE RESOURCES
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div
+              className="col-md-6 block-img hidden-xs hidden-sm animated fadeInUp"
+              style={{
+                backgroundImage:
+                  " url('https://s3.amazonaws.com/marketing2019-startchurch/acts_29/resources.jpg')",
+                backgroundPosition: "65% 23%",
+              }}
+            ></div>
+          </div>
+        </section>
+        {/* Contact */}
+        <section id="contact-campaigns" className="light-bg">
+          <div className="container inner-sm ">
+            <div className="row inner-top-xs">
+              <div className="col-md-12 text-center animated fadeInUp">
+                <div className="col-md-12 col-sm-10 center-block text-center animated fadeInUp">
+                  <header>
+                    <div className="h1">
+                      <span className="light-color orange-bg">
+                        Get started today!
+                      </span>
+                    </div>
+                  </header>
+                </div>
+              </div>
+            </div>
+            <div className="row inner-top-xs text-left">
+              <div className="sched-call-container col-lg-4 col-md-5 col-sm-6 inner-bottom-xs col-md-offset-1 col-lg-offset-2 animated fadeInUp">
+                <h2 className="text-green">
+                  {" "}
+                  <i className="icon-phone"></i> CALL US TODAY!
+                </h2>
+                <div className="sched-call-content">
+                  <p>
+                    <small>Are you ready to get started?</small>
+                  </p>
+                  <p>
+                    <small>Do you have any questions or concerns?</small>
+                  </p>
+                  <p>
+                    <small>
+                      Whatever they may be, we are here for you. Call us today
+                      and one of our specialists will gladly assist you with
+                      your needs.
+                    </small>
+                  </p>
+                </div>
+                <p>
+                  <button
+                    type="button"
+                    style={{ marginLeft: 0 }}
+                    className="btn btn-orange"
+                  >
+                    Call us{" "}
+                    <span
+                      className="rTapNumber227338"
+                      style={{ visibility: "visible" }}
+                    >
+                      <a href="tel:+18448847703">(844) 884-7703</a>
+                    </span>
+                  </button>
+                </p>
+              </div>
+              <div className="sched-call-container col-lg-4 col-md-5 col-sm-6 inner-bottom-xs col-lg-offset-1 animated fadeInUp">
+                <h2
+                  className="text-green"
+                  style={{ textTransform: "uppercase" }}
+                >
+                  <i className="icon-clock"></i> Schedule a call
+                </h2>
+                <div className="sched-call-content">
+                  <p>
+                    <small>
+                      Are you unavailable to call right now? That’s okay!
+                    </small>
+                  </p>
+                  <p className="blue">
+                    <small>
+                      <b>Schedule a time that works for you:</b>
+                    </small>
+                  </p>
+                </div>
+                <p>
+                  <a
+                    href="/sac"
+                    style={{ marginLeft: 0 }}
+                    target="_blank"
+                    className="btn btn-orange"
+                  >
+                    Schedule a call
+                  </a>
+                </p>
               </div>
             </div>
           </div>
