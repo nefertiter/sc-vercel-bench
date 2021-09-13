@@ -7,7 +7,6 @@ const Header = () => {
   useEffect(() => {
     if (typeof window !== "undefined" && typeof window.$ === "undefined") {
       window.jQuery = window.$ = require("../public/js/jquery.min.js");
-      console.log("login jquery", $(".js-activated"));
     }
 
     const is_touch_device = () => {

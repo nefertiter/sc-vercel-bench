@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { useEffect } from "react";
 import EnglishLayout from "../layouts/EnglishLayout";
+import Wistia from "../components/Wistia";
 import Image from "next/image";
 import Head from "next/head";
 
@@ -37,11 +38,11 @@ const Services501c3: NextPage = () => {
           <div id="owl-main" className="owl-carousel owl-one-item block">
             <div
               className="item img-bg-top img-bg-soft lazy-bg"
-              // data-src="https://s3.amazonaws.com/marketing2019-startchurch/2020/heroes/startright_hero_2.jpg"
+              data-src="https://s3.amazonaws.com/marketing2019-startchurch/2020/heroes/startright_hero_2.jpg"
               style={{
                 backgroundPosition: "80% 30% !important",
-                backgroundImage:
-                  "url('https://s3.amazonaws.com/marketing2019-startchurch/2020/heroes/startright_hero_2.jpg')",
+                // backgroundImage:
+                //   "url('https://s3.amazonaws.com/marketing2019-startchurch/2020/heroes/startright_hero_2.jpg')",
               }}
             >
               {/* <a href="#contact-campaigns"> */}
@@ -71,6 +72,29 @@ const Services501c3: NextPage = () => {
             </div>
           </div>
         </section>
+
+        <section id="video-section" style={{ backgroundColor: "#f2f5f7" }}>
+          <div className="container inner-top-xs inner-bottom-sm">
+            <div className="row">
+              <div className="col-md-8 col-sm-9 text-center center-block">
+                <header>
+                  <div className="h2 dark-color">
+                    <b>Protect what God has given you to lead!</b>
+                  </div>
+                </header>
+              </div>
+            </div>
+            <div className="row inner-top-xs">
+              <div className="col-md-8 col-sm-9 text-center center-block">
+                <Wistia
+                  videoId="pgi665kjw0"
+                  image="https://embed-fastly.wistia.com/deliveries/612db29f57b79a2ba8f3e48f7410a803468ba077.webp?image_crop_resized=640x360"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="white-bg">
           <div className="container inner-top inner-bottom-sm">
             <div className="row">
@@ -157,11 +181,11 @@ const Services501c3: NextPage = () => {
 
         <section
           className="img-bg img-bg-soft tint-bg lazy-bg"
-          // data-src="https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_4.jpg"
+          data-src="https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_4.jpg"
           style={{
             backgroundPosition: "35% 30% !important",
-            backgroundImage:
-              "url(https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_4.jpg)",
+            // backgroundImage:
+            //   "url(https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_4.jpg)",
           }}
         >
           <div className="container inner-sm">
@@ -335,8 +359,10 @@ const Services501c3: NextPage = () => {
                     Hear what pastors are saying about the StartRIGHT Service.
                   </div>
                 </header>
-                video goes here
-                {/* {{  {'id': 'v56f7h54dn', 'image': 'https://embedwistia-a.akamaihd.net/deliveries/1feedac60705fe2f3fd7c513a005e409.webp?image_crop_resized=640x360' } | WistiaVideo | raw }} */}
+                <Wistia
+                  videoId="v56f7h54dn"
+                  image="https://embedwistia-a.akamaihd.net/deliveries/1feedac60705fe2f3fd7c513a005e409.webp?image_crop_resized=640x360"
+                />
                 <div className="col-xs-10 outer-top-xs center-block text-center">
                   <header>
                     <p>
@@ -420,11 +446,11 @@ const Services501c3: NextPage = () => {
 
         <section
           className="img-bg img-bg-soft tint-bg lazy-bg"
-          // data-src="https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_3.jpg"
+          data-src="https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_3.jpg"
           style={{
             backgroundPosition: "23% 10% !important",
-            backgroundImage:
-              "url(https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_3.jpg)",
+            // backgroundImage:
+            //   "url(https://s3.amazonaws.com/assets-startchurch-stage/REB+assets/images/banners/option_3.jpg)",
           }}
         >
           <div className="container inner-sm">
