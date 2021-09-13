@@ -33,6 +33,44 @@ const Services501c3: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="block-content">
+        <section id="hero">
+          <div id="owl-main" className="owl-carousel owl-one-item block">
+            <div
+              className="item img-bg-top img-bg-soft lazy-bg"
+              // data-src="https://s3.amazonaws.com/marketing2019-startchurch/2020/heroes/startright_hero_2.jpg"
+              style={{
+                backgroundPosition: "80% 30% !important",
+                backgroundImage:
+                  "url('https://s3.amazonaws.com/marketing2019-startchurch/2020/heroes/startright_hero_2.jpg')",
+              }}
+            >
+              <a href="#contact-campaigns">
+                <div className="container">
+                  <div className="caption vertical-center text-left">
+                    <div className="h1 dark-color text-nt">
+                      THE StartRIGHT
+                      <sup>
+                        <small className="dark-color">&reg;</small>
+                      </sup>
+                      <br /> SERVICE
+                    </div>
+                    <p className="dark-color">
+                      Everything you need to start your church
+                    </p>
+                    <div className="">
+                      <a
+                        className="btn btn-green btn-large"
+                        href="#contact-campaigns"
+                      >
+                        Get started now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
         <section className="white-bg">
           <div className="container inner-top inner-bottom-sm">
             <div className="row">

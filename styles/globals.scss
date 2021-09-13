@@ -7,10 +7,19 @@
 @import "components/header.scss";
 @import "components/footer.scss";
 @import "components/theme.scss";
+@import "components/buttons.scss";
+@import "components/owl-carousel.scss";
 
 // Fonts
 @import "fonts/fontello/fontello.scss";
 
+// Help to reduce inline
 .hidden {
   display: none;
+}
+.text-nt {
+  text-transform: none !important;
+}
+.block {
+  display: block;
 }
