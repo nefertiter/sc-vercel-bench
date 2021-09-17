@@ -8,6 +8,8 @@ const Header = () => {
     if (typeof window !== "undefined" && typeof window.$ === "undefined") {
       window.jQuery = window.$ = require("../public/js/jquery.min.js");
     }
+    // Addings Bootstrap
+    require("../styles/bootstrap/assets/javascripts/bootstrap/collapse");
 
     const is_touch_device = () => {
       return (
@@ -16,6 +18,7 @@ const Header = () => {
         navigator.maxTouchPoints
       ); // works on IE10/11 and Surface
     };
+
     if (!is_touch_device()) {
       require("../public/js/bootstrap-hover-dropdown.min.js");
       $(".js-activated").dropdownHover({
@@ -30,11 +33,11 @@ const Header = () => {
       });
     }
 
-    if ($(".navbar .navbar-collapse").length > 0) {
-      // var sticky = new Waypoint.Sticky({
-      //   element: $(".navbar .navbar-collapse")[0],
-      // });
-    }
+    // if ($(".navbar .navbar-collapse").length > 0) {
+    // var sticky = new Waypoint.Sticky({
+    //   element: $(".navbar .navbar-collapse")[0],
+    // });
+    // }
 
     // if ($(window).width() <= 768) {
     //   $(window).scroll(function () {

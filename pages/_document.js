@@ -18,6 +18,10 @@ class MyDocument extends Document {
             href="https://s3.amazonaws.com/assets-startchurch/assets/fonts/scicon/style.css"
             rel="stylesheet"
           ></link>
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-5459676-1"
+          />
         </Head>
         <body>
           <Main />
