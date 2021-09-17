@@ -5,7 +5,7 @@ import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 
 const tagManagerArgs = {
-  gtmId: "GTM-GTM-5V6FR3",
+  gtmId: "GTM-5V6FR3",
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
