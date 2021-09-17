@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import TagManager from "react-gtm-module";
-import ReactPixel from "react-facebook-pixel";
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
